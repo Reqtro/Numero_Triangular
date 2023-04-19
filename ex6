@@ -1,0 +1,35 @@
+/* Crie um algoritmo que verifica se o número digitado é triangular, se for digitado um número
+menor do que ou igual a zero o algoritmo deve ser encerrado e enviar a mensagem “Obrigado
+por usar o algoritmo”. Para compreender o que é um numero triangular acesse o site
+http://clubes.obmep.org.br/blog/sala-de-leitura-numeros-triangulares/. 
+*/
+
+public class E6_Lista {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner (System.in);
+        int numero = 1;
+        double y = 0;
+        double x = 0;
+        double z = 0;
+        while (numero >0) {
+            System.out.println("Digite um numero triangular:");
+            numero = sc.nextInt();
+            y = (((2* numero) *4 )+ 1);
+            x = Math.sqrt(y);
+            z = (( -1 + x ));
+            if (z % 2 == 0){
+                System.out.println("O numero " + numero + " e triangular");
+            }
+            else {
+                System.out.println("O numero " + numero + " nao e triangular");
+            }
+        }
+        System.out.println("Obrigado por usar o algoritmo");
+    }
+    
+}
